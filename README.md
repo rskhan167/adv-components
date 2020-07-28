@@ -1,5 +1,9 @@
 # adv-components
 
+Advanced components concepts of Vuejs.
+   :like passing content using slots.
+   :switching multiple components with dynamic components.
+ 
 ## Project setup
 ```
 npm install
