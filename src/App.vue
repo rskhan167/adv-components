@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <appQuote>
+      <h2 slot="title">{{ quoteTitle }}</h2>
+      <p slot="content">A wonderful quote</p>
+    </appQuote>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Quote from './components/Quote.vue';
 
 export default {
-  name: 'App',
+  data: function(){
+      return {
+        quoteTitle: 'The Quote'
+      }
+  },
   components: {
-    HelloWorld
+    appQuote: Quote
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  
 </style>
